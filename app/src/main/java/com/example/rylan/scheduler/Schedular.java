@@ -88,7 +88,6 @@ public class Schedular extends AppCompatActivity {
             public void execute(Realm bgRealm) {
                 SchData schData=bgRealm.createObject(SchData.class);
                 schData.setTopic(topic.getText().toString().trim());
-                schData.setDate1(date1);
                 SimpleDateFormat f=new SimpleDateFormat("yyyy/mm/dd hh:mm aa");
                 ParsePosition pp=new ParsePosition(0);
                 schData.setDaa(f.parse(date1,pp));

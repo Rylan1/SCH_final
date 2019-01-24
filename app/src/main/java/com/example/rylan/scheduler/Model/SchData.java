@@ -6,15 +6,15 @@ import io.realm.RealmObject;
 
 public class SchData extends RealmObject {
     private String topic;
-    private String date1;
+
     private Date daa;
     private Date date2;
     public SchData(){}
 
-    public SchData(String topic, String date, Date daa, Date date2) {
+    public SchData(String topic, Date daa, Date date2) {
 
         this.topic = topic;
-        this.date1 = date;
+
         this.daa = daa;
         this.date2 = date2;
     }
@@ -29,13 +29,6 @@ public class SchData extends RealmObject {
 
 
 
-    public String getDate1() {
-        return date1;
-    }
-
-    public void setDate1(String date) {
-        this.date1 = date;
-    }
 
     public Date getDaa() {
         return daa;
