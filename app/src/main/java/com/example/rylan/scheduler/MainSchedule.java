@@ -17,7 +17,7 @@ import io.realm.Realm;
 import io.realm.RealmResults;
 
 public class MainSchedule extends AppCompatActivity {
-    private Date startDate,endDate;
+
     Realm realm;
     @Override
     protected void onCreate(Bundle savedInstanceState) {

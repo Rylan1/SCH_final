@@ -39,14 +39,8 @@ public class Schedular extends AppCompatActivity {
         topic= findViewById(R.id.tpoicTxt);
         time2=findViewById(R.id.time2);
         date=findViewById(R.id.datepick);
-
         time=findViewById(R.id.timetdxt);
         realm = Realm.getDefaultInstance();
-        /*realm.beginTransaction();
-        realm.deleteAll();
-        realm.commitTransaction();*/
-
-
         date.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -68,7 +62,6 @@ public class Schedular extends AppCompatActivity {
                 date.setText(year+"/"+(month+1)+"/"+dayOfMonth);
             }
         };
-
         Button button= (Button) findViewById(R.id.button2);
         button.setOnClickListener(new View.OnClickListener(){
             @Override
@@ -103,6 +96,7 @@ public class Schedular extends AppCompatActivity {
         }, new Realm.Transaction.OnError() {
             @Override
             public void onError(Throwable error) {
+                Toast.makeText(getApplicationContext(),"Failed to save",Toast.LENGTH_SHORT).show();
                 // Transaction failed and was automatically canceled.
             }
         });
