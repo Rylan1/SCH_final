@@ -15,8 +15,8 @@ import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 
 public class arrayAdapter extends BaseAdapter {
-    Context mcontext;
-    ArrayList<SchData>data=new ArrayList<>();
+    private Context mcontext;
+    private ArrayList<SchData>data;
     public arrayAdapter(Context context, ArrayList<SchData> data){
         mcontext=context;
         this.data=data;

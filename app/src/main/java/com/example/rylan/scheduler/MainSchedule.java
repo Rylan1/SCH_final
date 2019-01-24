@@ -39,8 +39,6 @@ public class MainSchedule extends AppCompatActivity {
         });
         realm=Realm.getDefaultInstance();
         getData();
-
-
     }
 
     public void openSchedular(){
@@ -85,6 +83,4 @@ public class MainSchedule extends AppCompatActivity {
         finish();
         startActivity(getIntent());
     }
-
-
 }

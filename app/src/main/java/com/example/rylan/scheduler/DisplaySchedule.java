@@ -30,7 +30,7 @@ import io.realm.RealmModel;
 import io.realm.RealmResults;
 
 public class DisplaySchedule extends AppCompatActivity {
-    private TextView datepick,display1;
+    private TextView datepick;
     private DatePickerDialog.OnDateSetListener dateSetListener;
     private ListView listView;
     private String date2,dat1;
@@ -82,26 +82,19 @@ public class DisplaySchedule extends AppCompatActivity {
 
     private void getData(){
         RealmResults<SchData> schData=realm.where(SchData.class).findAll();
-        SimpleDateFormat f=new SimpleDateFormat("hh:mm aa");
         SimpleDateFormat g=new SimpleDateFormat("yyyy/MM/dd");
-        String data="";
-
         for(SchData schData1:schData){
             try{
                 dat1=g.format(schData1.getDaa());
                 if(date2.equals(dat1)){
                     displaylist.add(schData1);
-               /* data=data+"\nTopic: "+schData1.getTopic()+"\n     Start Time: "+
-                        f.format(schData1.getDaa())+"\n     End Time: "+f.format(schData1.getDate2())+"\n\n";
-                display1.setText(data);*/}
+               }
             }
             catch(NullPointerException e){
                 e.printStackTrace();
             }
         }
-
         showStuff();
-
     }
 
     private void showStuff() {
