@@ -72,9 +72,8 @@ public class Schedular extends AppCompatActivity {
         });
     }
     private void saveData(){
-        date2+=" "+time2.getText();
-        date1+=" "+time.getText();
-
+        String edDate=date2+" "+time2.getText();
+        String stDate=date1+" "+time.getText();
 
         realm.executeTransactionAsync(new Realm.Transaction() {
             @Override
@@ -83,9 +82,9 @@ public class Schedular extends AppCompatActivity {
                 schData.setTopic(topic.getText().toString().trim());
                 SimpleDateFormat f=new SimpleDateFormat("yyyy/mm/dd hh:mm aa");
                 ParsePosition pp=new ParsePosition(0);
-                schData.setDaa(f.parse(date1,pp));
+                schData.setDaa(f.parse(stDate,pp));
                 ParsePosition pp2=new ParsePosition(0);
-                schData.setDate2(f.parse(date2,pp2));
+                schData.setDate2(f.parse(edDate,pp2));
 
             }
         }, new Realm.Transaction.OnSuccess() {
