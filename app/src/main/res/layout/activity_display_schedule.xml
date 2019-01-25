@@ -23,18 +23,6 @@
             android:hint="@string/tap_to_select_date"
             android:textSize="36sp" />
 
-        <ScrollView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="vertical">
-
-            </LinearLayout>
-        </ScrollView>
-
         <ListView
             android:id="@+id/good"
             android:layout_width="match_parent"
