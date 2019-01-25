@@ -70,6 +70,13 @@ public class Schedular extends AppCompatActivity {
 
             }
         });
+        Button but=findViewById(R.id.button5);
+        but.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                finish();
+            }
+        });
     }
     private void saveData(){
         String edDate=date2+" "+time2.getText();
