@@ -35,7 +35,6 @@ public class DisplaySchedule extends AppCompatActivity {
     private ListView listView;
     private String date2,dat1;
     Realm realm;
-
     ArrayList<SchData> displaylist;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
